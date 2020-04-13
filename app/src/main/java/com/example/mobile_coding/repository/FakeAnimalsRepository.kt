@@ -1,13 +1,11 @@
 package com.example.mobile_coding.repository
 
-import com.example.mobile_coding.model.Animal
-import com.example.mobile_coding.model.Cat
-import com.example.mobile_coding.model.Dog
-import com.example.mobile_coding.model.Parrot
+import com.example.mobile_coding.model.*
 
 class FakeAnimalsRepository : AnimalsRepository {
     override fun getAnimals(): List<Animal> {
         return ArrayList<Animal>().apply {
+
             add(Cat("1", 9))
             add(Parrot("2", 5))
             add(Dog("3", 13))

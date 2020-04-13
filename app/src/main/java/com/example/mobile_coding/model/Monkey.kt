@@ -1,13 +1,13 @@
 package com.example.mobile_coding.model
 
-class Cat
+class Monkey
 constructor(name: String, age: Int) : Animal(name, age)
 {
     override fun communicate(): String {
-        return "MEOW"
+        return "Ua ua ua"
     }
 
     override fun getInfo(): String {
-        return "${communicate()} I'm a cat ${super.getInfo()}"
+        return "I am monkey ${super.getInfo()}, ${communicate()}"
     }
 }
