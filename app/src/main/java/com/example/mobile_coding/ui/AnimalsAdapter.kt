@@ -1,10 +1,14 @@
 package com.example.mobile_coding.ui
 
+import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.mobile_coding.R
 import com.example.mobile_coding.model.Animal
+import com.example.mobile_coding.model.Cat
+import com.example.mobile_coding.model.Dog
+import com.example.mobile_coding.model.Parrot
 
 class AnimalsAdapter
 constructor(
@@ -32,5 +36,12 @@ constructor(
 
     override fun onBindViewHolder(holder: AnimalViewHolder, position: Int) {
         holder.setInfo(items[position].getInfo())
+
+        when (items[position]){
+            is Cat -> holder.colorBackground(Color.GREEN)
+            is Dog -> holder.colorBackground(Color.BLUE)
+            is Parrot -> holder.colorBackground(Color.YELLOW)
+            else -> holder.colorBackground(Color.WHITE)
+        }
     }
 }
