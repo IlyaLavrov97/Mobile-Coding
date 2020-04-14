@@ -4,8 +4,10 @@ package com.example.mobile_coding.model
 class Parrot
 constructor(
     name: String,
-    age: Int
-) : Animal(name, age), Flyable {
+    age: Int,
+    color: String,
+    type: String
+) : Animal(name, age, color, type), Flyable {
     override fun fly() {
         // fly
     }
