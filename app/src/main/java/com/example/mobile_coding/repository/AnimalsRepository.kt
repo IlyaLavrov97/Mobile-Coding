@@ -4,4 +4,5 @@ import com.example.mobile_coding.model.Animal
 
 interface AnimalsRepository {
     fun getAnimals() : List<Animal>
+    fun getAnimals1() : List<Animal>
 }
