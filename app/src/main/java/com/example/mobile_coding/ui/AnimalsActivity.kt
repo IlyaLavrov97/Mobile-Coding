@@ -27,12 +27,14 @@ class AnimalsActivity : AppCompatActivity() {
 
     private fun itemClick(animal: Animal) {
         val intent = Intent(this, AnimalDetailsActivity::class.java).apply {
-            putExtra(EXTRA_MESSAGE, animal.getInfo())
+            putExtra(MAIN_INFO_MESSAGE, animal.getInfo())
+            putExtra(ADDITIONAL_INFO_MESSAGE, animal.getAdditionalInfo())
         }
         startActivity(intent)
     }
 
     companion object {
-        const val EXTRA_MESSAGE: String = "EXTRA_MESSAGE"
+        const val MAIN_INFO_MESSAGE: String = "MAIN_INFO_MESSAGE"
+        const val ADDITIONAL_INFO_MESSAGE: String = "ADDITIONAL_INFO_MESSAGE"
     }
 }
