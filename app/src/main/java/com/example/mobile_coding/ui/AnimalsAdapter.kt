@@ -35,7 +35,7 @@ constructor(
 
     override fun onBindViewHolder(holder: AnimalViewHolder, position: Int) {
         val item = items[position]
-        holder.setInfo(item.getInfo())
+        holder.setInfo(item.getInfo() + item.getAddInfo())
         holder.setBackgroundColor(item)
     }
 }

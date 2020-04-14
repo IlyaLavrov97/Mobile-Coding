@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="inset_1x">8dp</dimen>
-    <dimen name="inset_2x">16dp</dimen>
-    <dimen name="inset_3x">24dp</dimen>
+    <dimen name="inset_1x">16dp</dimen>
+    <dimen name="inset_2x">0dp</dimen>
+    <dimen name="inset_3x">16dp</dimen>
 </resources>

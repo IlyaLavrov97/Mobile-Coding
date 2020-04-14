@@ -21,6 +21,7 @@ constructor(
         infoTextView.text = info
     }
 
+
     fun setBackgroundColor(animal: Animal) {
         val infoContainer = view.findViewById<ConstraintLayout>(R.id.infoContainer)
 
