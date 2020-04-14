@@ -1,10 +1,8 @@
 package com.example.mobile_coding.model
 
 class Parrot
-constructor(
-    name: String,
-    age: Int
-) : Animal(name, age), Flyable {
+constructor(name: String, age: Int) : Animal(name, age), Flyable
+{
     override fun fly() {
         // TODO fly implementation
     }
