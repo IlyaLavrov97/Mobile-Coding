@@ -15,27 +15,75 @@ constructor(
     private val clickItemListener: (Animal) -> Unit
 ) : RecyclerView.Adapter<AnimalViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AnimalViewHolder {
-        val viewHolder = AnimalViewHolder(
-            LayoutInflater.from(parent.context).inflate(
-                R.layout.item_animal,
-                parent,
-                false
-            )
-        )
-        viewHolder.itemView.setOnClickListener {
-            val position = viewHolder.adapterPosition
-            if (position != RecyclerView.NO_POSITION) {
-                clickItemListener(items[position])
+        val inflater = LayoutInflater.from(parent.context)
+
+        return when (viewType) {
+            CAT_VIEW_TYPE -> {
+                CatViewHolder(inflater.inflate(
+                    R.layout.item_cat,
+                    parent,
+                    false
+                ), ::onItemClick
+                )
             }
+            DOG_VIEW_TYPE -> {
+                DogViewHolder(inflater.inflate(
+                    R.layout.item_dog,
+                    parent,
+                    false
+                ), ::onItemClick
+                )
+            }
+            PARROT_VIEW_TYPE -> {
+                ParrotViewHolder(inflater.inflate(
+                    R.layout.item_parrot,
+                    parent,
+                    false
+                ), ::onItemClick
+                )
+            }
+            else -> throw ClassNotFoundException()
         }
-        return viewHolder
+    }
+
+    private fun onItemClick(position: Int) {
+        if (position != RecyclerView.NO_POSITION) {
+            clickItemListener(items[position])
+        }
     }
 
     override fun getItemCount(): Int = items.size
 
+
     override fun onBindViewHolder(holder: AnimalViewHolder, position: Int) {
         val item = items[position]
-        holder.setInfo(item.getInfo())
-        holder.setBackgroundColor(item)
+
+        when (holder) {
+            is CatViewHolder -> {
+                // TODO
+            }
+            is DogViewHolder -> {
+                // TODO
+            }
+            is ParrotViewHolder -> {
+                // TODO
+            }
+            else -> throw ClassNotFoundException()
+        }
+    }
+
+    override fun getItemViewType(position: Int): Int {
+        return when (items[position]) {
+            is Cat -> CAT_VIEW_TYPE
+            is Dog -> DOG_VIEW_TYPE
+            is Parrot -> PARROT_VIEW_TYPE
+            else -> throw ClassNotFoundException()
+        }
+    }
+
+    companion object {
+        private const val CAT_VIEW_TYPE: Int = 1
+        private const val DOG_VIEW_TYPE: Int = 2
+        private const val PARROT_VIEW_TYPE: Int = 3
     }
 }

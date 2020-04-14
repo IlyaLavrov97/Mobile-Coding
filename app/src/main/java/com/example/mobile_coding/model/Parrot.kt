@@ -1,12 +1,13 @@
 package com.example.mobile_coding.model
 
+// TODO Расширить модель по возможности
 class Parrot
 constructor(
     name: String,
     age: Int
 ) : Animal(name, age), Flyable {
     override fun fly() {
-        // TODO fly implementation
+        // fly
     }
 
     override fun getInfo(): String {
