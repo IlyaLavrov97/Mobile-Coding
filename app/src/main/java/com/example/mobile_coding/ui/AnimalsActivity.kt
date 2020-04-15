@@ -27,7 +27,7 @@ class AnimalsActivity : AppCompatActivity() {
 
     private fun itemClick(animal: Animal) {
         val intent = Intent(this, AnimalDetailsActivity::class.java).apply {
-            putExtra(EXTRA_MESSAGE, animal.getInfo())
+            putExtra(EXTRA_MESSAGE, animal.getInfo() + " " + animal.getAdditionalInfo())
         }
         startActivity(intent)
     }

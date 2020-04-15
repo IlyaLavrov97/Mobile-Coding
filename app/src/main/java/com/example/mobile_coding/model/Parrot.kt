@@ -3,8 +3,10 @@ package com.example.mobile_coding.model
 class Parrot
 constructor(
     name: String,
-    age: Int
-) : Animal(name, age), Flyable {
+    age: Int,
+    breed: String,
+    color: String
+) : Animal(name, age, breed, color), Flyable {
     override fun fly() {
         // TODO fly implementation
     }
@@ -15,5 +17,9 @@ constructor(
 
     override fun communicate(): String {
         return "I AM A PARRROT!"
+    }
+
+    override fun getAdditionalInfo() :String{
+        return "my ${super.getAdditionalInfo()}"
     }
 }
