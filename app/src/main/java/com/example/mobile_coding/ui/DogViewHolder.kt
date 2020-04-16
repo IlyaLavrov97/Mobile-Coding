@@ -13,10 +13,7 @@ class DogViewHolder(
 ) : AnimalViewHolder(view, onClick) {
     // TODO По возможности сделать здесь кастомные поля
     // создать bind методы
-    fun setInfo(dog : Animal){
-        if (dog !is Dog) throw ClassNotFoundException()
-
-        val infoTextView = view.findViewById<TextView>(R.id.dogTextView)
-        infoTextView.text = dog.getAdditionalInfo()
+    fun setInfo(dog : Dog){
+        view.dogTextView.text = dog.getAdditionalInfo()
     }
 }

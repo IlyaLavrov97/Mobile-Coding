@@ -13,10 +13,7 @@ class CatViewHolder(
 ) : AnimalViewHolder(view, onClick) {
     // TODO По возможности сделать здесь кастомные поля
     // создать bind методы
-    fun setInfo(cat : Animal){
-        if (cat !is Cat) throw ClassNotFoundException()
-
-        val infoTextView = view.findViewById<TextView>(R.id.catTextView)
-        infoTextView.text = cat.getInfo()
+    fun setInfo(cat : Cat){
+        view.catTextView.text = cat.getInfo()
     }
 }
