@@ -13,13 +13,35 @@ class FakeAnimalsRepository : AnimalsRepository {
             for (i in 0 until 20) {
                 when {
                     i % 3 == 0 -> {
-                        add(Cat("cat" + Random.nextInt(i, 100).toString(), Random.nextInt(i, 100), Random.nextInt(i, 100).toString(), Random.nextInt(i, 100).toString()))
+                        add(
+                            Cat(
+                                "cat" + Random.nextInt(i, i + 100).toString(),
+                                Random.nextInt(i, i + 100),
+                                Random.nextInt(i, i + 100).toString(),
+                                Random.nextInt(i, i + 100).toString()
+                            )
+                        )
                     }
                     i % 3 == 1 -> {
-                        add(Dog("dog" + Random.nextInt(i, 30).toString(), Random.nextInt(i, 20), Random.nextInt(i, 100).toString(), Random.nextInt(i, 100).toString()))
+                        add(
+                            Dog(
+                                "dog" + Random.nextInt(i, i + 100).toString(),
+                                Random.nextInt(i, i + 100),
+                                Random.nextInt(i, i + 100).toString(),
+                                Random.nextInt(i, i + 100).toString()
+                            )
+                        )
                     }
                     i % 3 == 2 -> {
-                        add(Parrot("parrot" + Random.nextInt(i, 30).toString(), Random.nextInt(i, 20), Random.nextInt(i, 100).toString(), Random.nextInt(i, 100).toString()))
+                        add(
+                            Parrot(
+                                "parrot" + Random.nextInt(i, i + 100).toString(),
+                                Random.nextInt(i, i + 100),
+                                Random.nextInt(i, i + 100).toString(),
+                                Random.nextInt(i, i + 100).toString(),
+                                Random.nextInt(i, i + 100)
+                            )
+                        )
                     }
                 }
             }

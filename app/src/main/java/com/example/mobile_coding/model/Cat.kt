@@ -1,6 +1,5 @@
 package com.example.mobile_coding.model
 
-// TODO Расширить модель по возможности
 class Cat
 constructor(
     name: String,

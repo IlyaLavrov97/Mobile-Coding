@@ -60,13 +60,13 @@ constructor(
 
         when (holder) {
             is CatViewHolder -> {
-                // TODO
+                holder.bindItem(item as Cat)
             }
             is DogViewHolder -> {
-                // TODO
+                holder.bindItem(item as Dog)
             }
             is ParrotViewHolder -> {
-                // TODO
+                holder.bindItem(item as Parrot)
             }
             else -> throw ClassNotFoundException()
         }
