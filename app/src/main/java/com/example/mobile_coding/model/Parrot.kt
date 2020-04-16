@@ -11,15 +11,15 @@ constructor(
         // TODO fly implementation
     }
 
+    override fun getAdditionalInfo(): String {
+        return "you did know that my ${super.getAdditionalInfo()} "
+    }
+
     override fun getInfo(): String {
         return "I'm Parrot. There is info about me: ${super.getInfo()}"
     }
 
     override fun communicate(): String {
         return "I AM A PARRROT!"
-    }
-
-    override fun getAdditionalInfo() :String{
-        return "my ${super.getAdditionalInfo()}"
     }
 }

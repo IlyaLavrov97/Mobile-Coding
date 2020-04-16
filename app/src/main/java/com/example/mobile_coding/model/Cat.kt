@@ -15,7 +15,7 @@ constructor(
         return "${communicate()} I'm a cat ${super.getInfo()}"
     }
 
-    override fun getAdditionalInfo() :String{
+    override fun getAdditionalInfo(): String {
         return "my ${super.getAdditionalInfo()}"
     }
 }

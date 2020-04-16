@@ -15,7 +15,7 @@ constructor(
         return "Custom info about ME ${communicate()}, ${super.getInfo()}"
     }
 
-    override fun getAdditionalInfo() :String{
-        return "my ${super.getAdditionalInfo()}"
+    override fun getAdditionalInfo(): String {
+        return "these are my features: ${super.getAdditionalInfo()} "
     }
 }
