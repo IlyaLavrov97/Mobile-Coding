@@ -14,6 +14,6 @@ constructor(
     }
 
     override fun getInfo(): String {
-        return "${communicate()} I'm a cat ${super.getInfo()}"
+        return "I'm a cat ${super.getInfo()}"
     }
 }

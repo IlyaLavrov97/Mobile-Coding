@@ -5,7 +5,7 @@ import androidx.recyclerview.widget.RecyclerView
 
 abstract class AnimalViewHolder
 constructor(
-    private val view: View,
+    val view: View,
     private val onClick: (Int) -> Unit
 ) : RecyclerView.ViewHolder(view) {
 

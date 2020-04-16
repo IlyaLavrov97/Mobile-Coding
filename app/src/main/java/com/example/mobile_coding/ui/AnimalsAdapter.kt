@@ -61,12 +61,15 @@ constructor(
         when (holder) {
             is CatViewHolder -> {
                 // TODO
+                holder.setInfo(item)
             }
             is DogViewHolder -> {
                 // TODO
+                holder.setInfo(item)
             }
             is ParrotViewHolder -> {
                 // TODO
+                holder.setInfo(item)
             }
             else -> throw ClassNotFoundException()
         }
