@@ -4,7 +4,9 @@ import android.os.Bundle
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.mobile_coding.R
-import com.example.mobile_coding.ui.AnimalsActivity.Companion.EXTRA_MESSAGE
+import com.example.mobile_coding.ui.AnimalsActivity.Companion.ADDITIONAL_INFO_MESSAGE
+import com.example.mobile_coding.ui.AnimalsActivity.Companion.MAIN_INFO_MESSAGE
+import kotlinx.android.synthetic.main.activity_animal_details.*
 
 class AnimalDetailsActivity : AppCompatActivity() {
 
@@ -13,11 +15,15 @@ class AnimalDetailsActivity : AppCompatActivity() {
         setContentView(R.layout.activity_animal_details)
 
         // Get the Intent that started this activity and extract the string
-        val message = intent.getStringExtra(EXTRA_MESSAGE)
+        val mainInfo = intent.getStringExtra(MAIN_INFO_MESSAGE)
+        val additionalInfo = intent.getStringExtra(ADDITIONAL_INFO_MESSAGE)
 
         // Capture the layout's TextView and set the string as its text
-        findViewById<TextView>(R.id.infoTextView).run {
-            text = message
+        infoTextView.run {
+            text = mainInfo
+        }
+        additionalInfoTextView.run {
+            text = additionalInfo
         }
     }
 }
