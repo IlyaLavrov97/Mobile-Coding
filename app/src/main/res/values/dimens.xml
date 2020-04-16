@@ -3,4 +3,8 @@
     <dimen name="inset_1x">8dp</dimen>
     <dimen name="inset_2x">16dp</dimen>
     <dimen name="inset_3x">24dp</dimen>
+
+    <dimen name="size_1x">8dp</dimen>
+    <dimen name="size_2x">16dp</dimen>
+    <dimen name="size_3x">24dp</dimen>
 </resources>

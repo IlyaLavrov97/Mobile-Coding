@@ -9,10 +9,9 @@
 
     <TextView
         android:id="@+id/parrotInfoTextView"
+        style="@style/TextAppearance.AppCompat.Headline"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:textSize="18sp"
-        android:textStyle="bold"
         android:gravity="center_vertical"
         android:layout_marginStart="@dimen/inset_2x"
         android:layout_marginEnd="@dimen/inset_2x"
@@ -26,9 +25,9 @@
 
     <TextView
         android:id="@+id/parrotWingTextView"
+        style="@style/TextAppearance.AppCompat.Body1"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:textSize="16sp"
         android:gravity="center_vertical"
         android:layout_marginStart="@dimen/inset_2x"
         android:layout_marginEnd="@dimen/inset_2x"
@@ -38,6 +37,5 @@
         app:layout_constraintTop_toBottomOf="@id/parrotInfoTextView"
         app:layout_constraintBottom_toBottomOf="parent"
         tools:text="@tools:sample/full_names"/>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

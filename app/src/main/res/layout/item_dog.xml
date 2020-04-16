@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -9,18 +8,31 @@
 
     <TextView
         android:id="@+id/dogTextView"
-        android:layout_width="0dp"
+        style="@style/TextAppearance.AppCompat.Title"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="18sp"
         android:gravity="center_vertical"
         android:layout_marginStart="@dimen/inset_2x"
         android:layout_marginEnd="@dimen/inset_2x"
         android:layout_marginTop="@dimen/inset_3x"
         android:layout_marginBottom="@dimen/inset_3x"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
         tools:text="@tools:sample/full_names"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/dogAdditionalTextView"
+        style="@style/TextAppearance.AppCompat.Body1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_marginStart="@dimen/inset_2x"
+        android:layout_marginEnd="@dimen/inset_2x"
+        android:layout_marginTop="@dimen/inset_1x"
+        android:layout_marginBottom="@dimen/inset_3x"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/dogTextView"
+        tools:text="@tools:sample/full_names"/>
+
+</RelativeLayout>
