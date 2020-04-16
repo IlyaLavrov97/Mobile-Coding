@@ -13,6 +13,6 @@ constructor(
     }
 
     override fun getInfo(): String {
-        return "Custom info about ME ${communicate()}, ${super.getInfo()}"
+        return "Custom info about me, ${super.getInfo()}"
     }
 }
