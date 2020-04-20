@@ -1,5 +1,7 @@
 package com.example.mobile_coding.model
 
+import com.example.mobile_coding.R
+
 class Parrot
 constructor(
     name: String,
@@ -22,5 +24,9 @@ constructor(
 
     fun getWingDescription(): String {
         return "My super wing is $wingSize size"
+    }
+
+    override fun getImage(): Int {
+        return R.drawable.parrot
     }
 }

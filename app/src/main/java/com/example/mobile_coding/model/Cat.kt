@@ -1,5 +1,7 @@
 package com.example.mobile_coding.model
 
+import com.example.mobile_coding.R
+
 class Cat
 constructor(
     name: String,
@@ -14,5 +16,9 @@ constructor(
 
     override fun getInfo(): String {
         return "${communicate()} I'm a cat ${super.getInfo()}"
+    }
+
+    override fun getImage(): Int {
+        return R.drawable.cat
     }
 }

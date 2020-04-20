@@ -1,5 +1,7 @@
 package com.example.mobile_coding.model
 
+import com.example.mobile_coding.R
+
 class Dog
 constructor(
     name : String,
@@ -13,5 +15,9 @@ constructor(
 
     override fun getInfo(): String {
         return "Custom info about ME ${communicate()}, ${super.getInfo()}"
+    }
+
+    override fun getImage(): Int {
+        return R.drawable.dog
     }
 }
