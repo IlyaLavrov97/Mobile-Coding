@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.mobile_coding.R
 import com.example.mobile_coding.ui.AnimalsActivity.Companion.ADDITIONAL_INFO_MESSAGE
+import com.example.mobile_coding.ui.AnimalsActivity.Companion.ANIMAL_IMAGE_INFO
 import com.example.mobile_coding.ui.AnimalsActivity.Companion.MAIN_INFO_MESSAGE
 import kotlinx.android.synthetic.main.activity_animal_details.*
 
@@ -16,8 +17,13 @@ class AnimalDetailsActivity : AppCompatActivity() {
         // Get the Intent that started this activity and extract the string
         val mainInfo = intent.getStringExtra(MAIN_INFO_MESSAGE)
         val additionalInfo = intent.getStringExtra(ADDITIONAL_INFO_MESSAGE)
+        val imageInfo = intent.getIntExtra(ANIMAL_IMAGE_INFO, 0)
 
         // Capture the layout's TextView and set the string as its text
+        animalImageView.run {
+            setImageResource(imageInfo)
+        }
+
         infoTextView.run {
             text = mainInfo
         }

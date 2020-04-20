@@ -29,6 +29,7 @@ class AnimalsActivity : AppCompatActivity() {
         val intent = Intent(this, AnimalDetailsActivity::class.java).apply {
             putExtra(MAIN_INFO_MESSAGE, animal.getInfo())
             putExtra(ADDITIONAL_INFO_MESSAGE, animal.getAdditionalInfo())
+            putExtra(ANIMAL_IMAGE_INFO, animal.getImage())
         }
         startActivity(intent)
     }
@@ -36,5 +37,6 @@ class AnimalsActivity : AppCompatActivity() {
     companion object {
         const val MAIN_INFO_MESSAGE: String = "MAIN_INFO_MESSAGE"
         const val ADDITIONAL_INFO_MESSAGE: String = "ADDITIONAL_INFO_MESSAGE"
+        const val ANIMAL_IMAGE_INFO: String = "ANIMAL_IMAGE_INFO"
     }
 }

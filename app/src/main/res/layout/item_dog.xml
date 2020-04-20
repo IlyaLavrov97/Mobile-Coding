@@ -11,14 +11,13 @@
         style="@style/TextAppearance.AppCompat.Title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:gravity="center_vertical"
         android:layout_marginStart="@dimen/inset_2x"
-        android:layout_marginEnd="@dimen/inset_2x"
         android:layout_marginTop="@dimen/inset_3x"
+        android:layout_marginEnd="@dimen/inset_2x"
         android:layout_marginBottom="@dimen/inset_3x"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
-        tools:text="@tools:sample/full_names"/>
+        android:layout_toRightOf="@+id/dogImageView"
+        android:gravity="center_vertical"
+        tools:text="@tools:sample/full_names" />
 
     <TextView
         android:id="@+id/dogAdditionalTextView"
@@ -30,9 +29,19 @@
         android:layout_marginEnd="@dimen/inset_2x"
         android:layout_marginTop="@dimen/inset_1x"
         android:layout_marginBottom="@dimen/inset_3x"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@+id/dogImageView"
         android:layout_below="@id/dogTextView"
         tools:text="@tools:sample/full_names"/>
+
+    <ImageView
+        android:id="@+id/dogImageView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="@dimen/inset_2x"
+        android:layout_marginEnd="@dimen/inset_2x"
+        android:layout_marginTop="@dimen/inset_3x"
+        android:layout_marginBottom="@dimen/inset_3x"
+        android:src="@drawable/dog"/>
 
 </RelativeLayout>

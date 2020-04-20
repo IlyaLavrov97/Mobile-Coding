@@ -15,4 +15,6 @@ abstract class Animal (
     open fun getAdditionalInfo() : String {
         return "Additional info: color $color, breed: $type"
     }
+
+    abstract fun getImage(): Int
 }
