@@ -13,12 +13,11 @@
         android:layout_weight="1"/>
 
     <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/dogImageView"
+        android:id="@+id/catImageView"
         android:layout_width="@dimen/size_10x"
         android:layout_height="@dimen/size_10x"
         android:layout_gravity="center_horizontal"
-        android:scaleType="centerCrop"
-        android:src="@drawable/img_cat"/>
+        android:scaleType="centerCrop"/>
 
     <Space
         android:layout_width="match_parent"
