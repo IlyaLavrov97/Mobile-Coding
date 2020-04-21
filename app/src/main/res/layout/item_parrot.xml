@@ -5,19 +5,30 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/redRose">
+    android:background="@android:color/holo_red_light">
+    
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/parrotImageView"
+        android:layout_width="@dimen/size_6x"
+        android:layout_height="@dimen/size_6x"
+        android:layout_margin="@dimen/inset_2x"
+        android:scaleType="centerCrop"
+        android:src="@drawable/img_parrot"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/parrotInfoTextView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
 
     <TextView
         android:id="@+id/parrotInfoTextView"
-        style="@style/TextAppearance.AppCompat.Headline"
+        style="@style/TextAppearance.AppCompat.Title"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:gravity="center_vertical"
-        android:layout_marginStart="@dimen/inset_2x"
         android:layout_marginEnd="@dimen/inset_2x"
-        android:layout_marginTop="@dimen/inset_3x"
+        android:layout_marginTop="@dimen/inset_2x"
         android:layout_marginBottom="@dimen/inset_1x"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@id/parrotImageView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toTopOf="@id/parrotWingTextView"
@@ -29,11 +40,9 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:gravity="center_vertical"
-        android:layout_marginStart="@dimen/inset_2x"
-        android:layout_marginEnd="@dimen/inset_2x"
-        android:layout_marginBottom="@dimen/inset_3x"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="@dimen/inset_2x"
+        app:layout_constraintStart_toStartOf="@id/parrotInfoTextView"
+        app:layout_constraintEnd_toEndOf="@id/parrotInfoTextView"
         app:layout_constraintTop_toBottomOf="@id/parrotInfoTextView"
         app:layout_constraintBottom_toBottomOf="parent"
         tools:text="@tools:sample/full_names"/>

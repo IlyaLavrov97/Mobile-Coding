@@ -11,6 +11,7 @@ class DogViewHolder(
     fun bindItem(dog: Dog) {
         itemView.run {
             dogTextView.text = dog.getInfo()
+            dogAdditionalTextView.text = dog.getAdditionalInfo()
         }
     }
 }

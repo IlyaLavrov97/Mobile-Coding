@@ -13,7 +13,7 @@ constructor(
     }
 
     override fun getInfo(): String {
-        return "I'm Parrot. There is info about me: ${super.getInfo()}"
+        return "I'm Parrot. ${super.getInfo()}"
     }
 
     override fun communicate(): String {

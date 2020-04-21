@@ -9,7 +9,7 @@ abstract class Animal (
     abstract fun communicate(): String
 
     open fun getInfo() : String {
-        return "$name, age: $age"
+        return "My name: $name, age: $age"
     }
 
     open fun getAdditionalInfo() : String {

@@ -11,6 +11,7 @@ class CatViewHolder(
     fun bindItem(cat: Cat) {
         itemView.run {
             catTextView.text = cat.getInfo()
+            catAdditionalInfoTextView.text = cat.getAdditionalInfo()
         }
     }
 }

@@ -3,12 +3,25 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="150dp"
+    android:layout_height="180dp"
     android:orientation="vertical"
     android:background="@color/gold">
 
     <Space
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/dogImageView"
+        android:layout_width="@dimen/size_10x"
+        android:layout_height="@dimen/size_10x"
+        android:layout_gravity="center_horizontal"
+        android:scaleType="centerCrop"
+        android:src="@drawable/img_cat"/>
+
+    <Space
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"/>
 
@@ -17,13 +30,14 @@
         style="@style/TextAppearance.AppCompat.Title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
         android:layout_marginStart="@dimen/inset_2x"
         android:layout_marginEnd="@dimen/inset_2x"
         tools:text="@tools:sample/full_names"/>
 
     <Space
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"/>
 
@@ -32,13 +46,13 @@
         style="@style/TextAppearance.AppCompat.Body1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical"
+        android:layout_gravity="center_horizontal"
         android:layout_marginStart="@dimen/inset_2x"
         android:layout_marginEnd="@dimen/inset_2x"
         tools:text="@tools:sample/full_names"/>
 
     <Space
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"/>
 

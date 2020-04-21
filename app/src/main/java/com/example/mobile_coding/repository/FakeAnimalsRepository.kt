@@ -15,7 +15,7 @@ class FakeAnimalsRepository : AnimalsRepository {
                     i % 3 == 0 -> {
                         add(
                             Cat(
-                                "cat" + Random.nextInt(i, i + 100).toString(),
+                                "Cat" + Random.nextInt(i, i + 100).toString(),
                                 Random.nextInt(i, i + 100),
                                 Random.nextInt(i, i + 100).toString(),
                                 Random.nextInt(i, i + 100).toString()
@@ -25,7 +25,7 @@ class FakeAnimalsRepository : AnimalsRepository {
                     i % 3 == 1 -> {
                         add(
                             Dog(
-                                "dog" + Random.nextInt(i, i + 100).toString(),
+                                "Dog" + Random.nextInt(i, i + 100).toString(),
                                 Random.nextInt(i, i + 100),
                                 Random.nextInt(i, i + 100).toString(),
                                 Random.nextInt(i, i + 100).toString()
@@ -35,7 +35,7 @@ class FakeAnimalsRepository : AnimalsRepository {
                     i % 3 == 2 -> {
                         add(
                             Parrot(
-                                "parrot" + Random.nextInt(i, i + 100).toString(),
+                                "Parrot" + Random.nextInt(i, i + 100).toString(),
                                 Random.nextInt(i, i + 100),
                                 Random.nextInt(i, i + 100).toString(),
                                 Random.nextInt(i, i + 100).toString(),
