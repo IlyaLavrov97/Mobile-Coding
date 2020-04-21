@@ -4,9 +4,10 @@ class Dog
 constructor(
     name : String,
     age : Int,
+    imageUrl: String?,
     color: String,
     type: String
-) : Animal(name, age, color, type) {
+) : Animal(name, age, imageUrl, color, type) {
     override fun communicate(): String {
         return "GAV"
     }

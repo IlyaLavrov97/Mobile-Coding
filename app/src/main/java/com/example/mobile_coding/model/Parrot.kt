@@ -4,10 +4,11 @@ class Parrot
 constructor(
     name: String,
     age: Int,
+    imageUrl: String?,
     color: String,
     type: String,
     private val wingSize: Int
-) : Animal(name, age, color, type), Flyable {
+) : Animal(name, age, imageUrl, color, type), Flyable {
     override fun fly() {
         // fly
     }
