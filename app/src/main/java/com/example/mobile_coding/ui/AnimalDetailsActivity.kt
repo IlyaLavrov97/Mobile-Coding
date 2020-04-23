@@ -2,9 +2,11 @@ package com.example.mobile_coding.ui
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.bumptech.glide.Glide
 import com.example.mobile_coding.R
-import com.example.mobile_coding.ui.AnimalsActivity.Companion.ADDITIONAL_INFO_MESSAGE
-import com.example.mobile_coding.ui.AnimalsActivity.Companion.MAIN_INFO_MESSAGE
+import com.example.mobile_coding.model.Animal
+import com.example.mobile_coding.model.Parrot
+import com.example.mobile_coding.ui.AnimalsActivity.Companion.ANIMAL_INFO
 import kotlinx.android.synthetic.main.activity_animal_details.*
 
 class AnimalDetailsActivity : AppCompatActivity() {
@@ -13,17 +15,31 @@ class AnimalDetailsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_animal_details)
 
-        // Get the Intent that started this activity and extract the string
-        val mainInfo = intent.getStringExtra(MAIN_INFO_MESSAGE)
-        val additionalInfo = intent.getStringExtra(ADDITIONAL_INFO_MESSAGE)
+        val bundle = intent.getBundleExtra(ANIMAL_INFO)
+        val animal = bundle?.getSerializable(ANIMAL_INFO) as Animal
 
-        // Capture the layout's TextView and set the string as its text
+        animalImageVew.run {
+            Glide
+                .with(context)
+                .load(animal.imageUrl)
+                .centerCrop()
+                .placeholder(R.drawable.img_cat)
+                .into(this)
+        }
+
         infoTextView.run {
-            text = mainInfo
+            text = animal.getInfo()
         }
 
         additionalInfoTextView.run {
-            text = additionalInfo
+            text = animal.getAdditionalInfo()
+        }
+
+        uniqueInfoTextView.run {
+            text = when(animal) {
+                is Parrot -> animal.getWingDescription()
+                else -> ""
+            }
         }
     }
 }

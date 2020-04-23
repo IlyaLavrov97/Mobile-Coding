@@ -8,26 +8,53 @@
     android:layout_height="match_parent"
     android:background="?attr/selectableItemBackground">
 
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/animalImageVew"
+        android:layout_width="@dimen/size_20x"
+        android:layout_height="@dimen/size_20x"
+        android:layout_marginTop="@dimen/inset_2x"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintVertical_bias="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/infoTextView"
+        tools:src="@tools:sample/avatars"/>
+
     <TextView
         android:id="@+id/infoTextView"
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:textSize="18sp"
         android:gravity="center"
         android:layout_marginStart="@dimen/inset_2x"
         android:layout_marginEnd="@dimen/inset_2x"
         android:layout_marginTop="@dimen/inset_3x"
-        android:layout_marginBottom="@dimen/inset_3x"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/animalImageVew"
         app:layout_constraintBottom_toTopOf="@id/additionalInfoTextView"
         tools:text="@tools:sample/full_names"/>
 
     <TextView
         android:id="@+id/additionalInfoTextView"
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:layout_marginStart="@dimen/inset_2x"
+        android:layout_marginEnd="@dimen/inset_2x"
+        android:layout_marginTop="@dimen/inset_3x"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/infoTextView"
+        app:layout_constraintBottom_toTopOf="@id/uniqueInfoTextView"
+        tools:text="@tools:sample/full_names"/>
+
+    <TextView
+        android:id="@+id/uniqueInfoTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:textSize="18sp"
         android:gravity="center"
         android:layout_marginStart="@dimen/inset_2x"
@@ -36,7 +63,7 @@
         android:layout_marginBottom="@dimen/inset_3x"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/infoTextView"
+        app:layout_constraintTop_toBottomOf="@id/additionalInfoTextView"
         app:layout_constraintBottom_toBottomOf="parent"
         tools:text="@tools:sample/full_names"/>
 

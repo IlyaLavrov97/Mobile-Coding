@@ -1,5 +1,6 @@
 package com.example.mobile_coding.ui
 
+import android.R.array
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
@@ -9,6 +10,7 @@ import com.example.mobile_coding.model.Animal
 import com.example.mobile_coding.repository.AnimalsRepository
 import com.example.mobile_coding.repository.FakeAnimalsRepository
 import kotlinx.android.synthetic.main.activity_animals.*
+
 
 class AnimalsActivity : AppCompatActivity() {
 
@@ -27,14 +29,14 @@ class AnimalsActivity : AppCompatActivity() {
 
     private fun itemClick(animal: Animal) {
         val intent = Intent(this, AnimalDetailsActivity::class.java).apply {
-            putExtra(MAIN_INFO_MESSAGE, animal.getInfo())
-            putExtra(ADDITIONAL_INFO_MESSAGE, animal.getAdditionalInfo())
+            val args = Bundle()
+            args.putSerializable(ANIMAL_INFO, animal)
+            putExtra(ANIMAL_INFO, args)
         }
         startActivity(intent)
     }
 
     companion object {
-        const val MAIN_INFO_MESSAGE: String = "MAIN_INFO_MESSAGE"
-        const val ADDITIONAL_INFO_MESSAGE: String = "ADDITIONAL_INFO_MESSAGE"
+        const val ANIMAL_INFO: String = "ANIMAL_INFO"
     }
 }
