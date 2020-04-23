@@ -4,7 +4,6 @@ import android.view.View
 import com.bumptech.glide.Glide
 import com.example.mobile_coding.R
 import com.example.mobile_coding.model.Parrot
-import kotlinx.android.synthetic.main.item_cat.view.*
 import kotlinx.android.synthetic.main.item_parrot.view.*
 
 class ParrotViewHolder(

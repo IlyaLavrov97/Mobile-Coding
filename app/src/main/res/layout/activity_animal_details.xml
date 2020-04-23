@@ -8,35 +8,52 @@
     android:layout_height="match_parent"
     android:background="?attr/selectableItemBackground">
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="@dimen/size_40x"
+        android:layout_height="@dimen/size_40x"
+        android:layout_margin="@dimen/inset_4x"
+        app:layout_constraintBottom_toTopOf="@+id/infoTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:id="@+id/infoTextView"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:textSize="18sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/inset_2x"
         android:gravity="center"
-        android:layout_marginStart="@dimen/inset_2x"
-        android:layout_marginEnd="@dimen/inset_2x"
-        android:layout_marginTop="@dimen/inset_3x"
-        android:layout_marginBottom="@dimen/inset_3x"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@id/additionalInfoTextView"
-        tools:text="@tools:sample/full_names"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageView"
+        tools:text="@tools:sample/full_names" />
 
     <TextView
         android:id="@+id/additionalInfoTextView"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/inset_2x"
+        android:gravity="center"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/uniqueInfoTextView"
+        app:layout_constraintTop_toBottomOf="@id/infoTextView"
+        tools:text="@tools:sample/full_names" />
+
+    <TextView
+        android:id="@+id/uniqueInfoTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/inset_2x"
         android:textSize="18sp"
         android:gravity="center"
-        android:layout_marginStart="@dimen/inset_2x"
-        android:layout_marginEnd="@dimen/inset_2x"
-        android:layout_marginTop="@dimen/inset_3x"
-        android:layout_marginBottom="@dimen/inset_3x"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/infoTextView"
+        app:layout_constraintTop_toBottomOf="@id/additionalInfoTextView"
         app:layout_constraintBottom_toBottomOf="parent"
         tools:text="@tools:sample/full_names"/>
 
