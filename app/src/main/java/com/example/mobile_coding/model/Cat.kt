@@ -15,4 +15,8 @@ constructor(
     override fun getInfo(): String {
         return "${communicate()} I'm a cat ${super.getInfo()}"
     }
+
+    override fun getImage(): String? {
+        return imageUrl
+    }
 }

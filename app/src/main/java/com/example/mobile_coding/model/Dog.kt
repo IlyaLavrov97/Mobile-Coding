@@ -2,8 +2,8 @@ package com.example.mobile_coding.model
 
 class Dog
 constructor(
-    name : String,
-    age : Int,
+    name: String,
+    age: Int,
     imageUrl: String?,
     color: String,
     type: String
@@ -14,5 +14,9 @@ constructor(
 
     override fun getInfo(): String {
         return "I'm DOGGY. ${communicate()}. ${super.getInfo()}"
+    }
+
+    override fun getImage(): String? {
+        return imageUrl
     }
 }

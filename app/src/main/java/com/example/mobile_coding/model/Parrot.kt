@@ -24,4 +24,8 @@ constructor(
     fun getWingDescription(): String {
         return "My super wing is $wingSize size"
     }
+
+    override fun getImage(): String? {
+        return imageUrl
+    }
 }
