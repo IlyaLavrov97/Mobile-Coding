@@ -3,10 +3,10 @@ package com.example.mobile_coding.model
 class Parrot
 constructor(
     name: String,
-    age: Int,
+    age: String,
     imageUrl: String?,
-    color: String,
-    type: String,
+    color: String?,
+    type: String?,
     private val wingSize: Int
 ) : Animal(name, age, imageUrl, color, type), Flyable {
     override fun fly() {

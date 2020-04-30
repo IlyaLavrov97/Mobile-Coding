@@ -1,14 +1,14 @@
 package com.example.mobile_coding.ui
 
-import android.R.array
 import android.content.Intent
 import android.os.Bundle
+import android.os.Handler
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.mobile_coding.R
 import com.example.mobile_coding.model.Animal
 import com.example.mobile_coding.repository.AnimalsRepository
-import com.example.mobile_coding.repository.FakeAnimalsRepository
+import com.example.mobile_coding.repository.CommonAnimalsRepository
 import kotlinx.android.synthetic.main.activity_animals.*
 
 
@@ -19,12 +19,19 @@ class AnimalsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_animals)
-        repository = FakeAnimalsRepository()
+        repository = CommonAnimalsRepository()
 
-        animalsRecyclerView.apply {
-            adapter = AnimalsAdapter(repository.getAnimals(), ::itemClick)
-            layoutManager = LinearLayoutManager(this@AnimalsActivity)
-        }
+        val mainHandler = Handler(this.mainLooper)
+        Thread {
+            val animals = repository.getAnimals()
+
+            mainHandler.post {
+                animalsRecyclerView.apply {
+                    adapter = AnimalsAdapter(animals, ::itemClick)
+                    layoutManager = LinearLayoutManager(this@AnimalsActivity)
+                }
+            }
+        }.start()
     }
 
     private fun itemClick(animal: Animal) {

@@ -1,11 +1,9 @@
 package com.example.mobile_coding.api.models
 
-import com.google.gson.annotations.SerializedName
-
-data class Pagination
-constructor(
-    @SerializedName("count_per_page") val countPerPage: Long,
-    @SerializedName("total_count") val totalCount: Long,
-    @SerializedName("current_page") val currentPage: Long,
-    @SerializedName("total_pages") val totalPages: Long
+data class Pagination(
+    val _links: LinksX,
+    val count_per_page: Int,
+    val current_page: Int,
+    val total_count: Int,
+    val total_pages: Int
 )

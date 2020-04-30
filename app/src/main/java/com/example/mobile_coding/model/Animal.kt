@@ -4,7 +4,7 @@ import java.io.Serializable
 
 abstract class Animal (
     var name: String,
-    var age: Int,
+    var age: String,
     val imageUrl: String?,
     private val color: String?,
     private val type: String?

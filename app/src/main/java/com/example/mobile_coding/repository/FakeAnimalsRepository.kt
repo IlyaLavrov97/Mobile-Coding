@@ -32,7 +32,7 @@ class FakeAnimalsRepository : AnimalsRepository {
                         add(
                             Cat(
                                 "Cat" + Random.nextInt(i, i + 100).toString(),
-                                Random.nextInt(i, i + 100),
+                                Random.nextInt(i, i + 100).toString(),
                                 catImages[Random.nextInt(0, 3)],
                                 Random.nextInt(i, i + 100).toString(),
                                 Random.nextInt(i, i + 100).toString()
@@ -43,7 +43,7 @@ class FakeAnimalsRepository : AnimalsRepository {
                         add(
                             Dog(
                                 "Dog" + Random.nextInt(i, i + 100).toString(),
-                                Random.nextInt(i, i + 100),
+                                Random.nextInt(i, i + 100).toString(),
                                 dogImages[Random.nextInt(0, 3)],
                                 Random.nextInt(i, i + 100).toString(),
                                 Random.nextInt(i, i + 100).toString()
@@ -54,7 +54,7 @@ class FakeAnimalsRepository : AnimalsRepository {
                         add(
                             Parrot(
                                 "Parrot" + Random.nextInt(i, i + 100).toString(),
-                                Random.nextInt(i, i + 100),
+                                Random.nextInt(i, i + 100).toString(),
                                 parrotImages[Random.nextInt(0, 3)],
                                 Random.nextInt(i, i + 100).toString(),
                                 Random.nextInt(i, i + 100).toString(),

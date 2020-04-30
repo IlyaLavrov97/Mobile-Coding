@@ -1,16 +1,27 @@
 package com.example.mobile_coding.api.models
 
-import com.google.gson.annotations.SerializedName
-
-data class Animal
-constructor(
-    @SerializedName("id") val id: Long,
-    @SerializedName("type") private val type: String,
-    @SerializedName("name") private val name: String,
-    @SerializedName("age") private val age: String,
-    @SerializedName("gender") private val gender: String,
-    @SerializedName("size") private val size: String,
-    @SerializedName("description") private val description: String,
-    @SerializedName("published_at") private val publishedAt: String,
-    @SerializedName("distance") private val distance: Double
+data class Animal(
+    val _links: Links,
+    val age: String,
+    val attributes: Attributes,
+    val breeds: Breeds,
+    val coat: String,
+    val colors: Colors,
+    val contact: Contact,
+    val description: String,
+    val distance: Double,
+    val environment: Environment,
+    val gender: String,
+    val id: Int,
+    val name: String,
+    val organization_id: String,
+    val photos: List<Photo>,
+    val published_at: String,
+    val size: String,
+    val species: String,
+    val status: String,
+    val tags: List<String>,
+    val type: String,
+    val url: String,
+    val videos: List<Video>
 )
